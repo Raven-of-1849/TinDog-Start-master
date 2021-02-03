@@ -15,7 +15,7 @@ h3 {
 
 
 .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 5%;
 }
 
 .navbar {
@@ -48,9 +48,17 @@ font-weight: bold;
 
 /* Title image */
 
+.title-image-parent {
+  position: relative;
+}
+
+
 .title-image {
+  position: absolute;
   width: 60%;
+  right: 28%;
   transform: rotate(20deg);
+  z-index: 0;
 }
 
 #title {
@@ -61,7 +69,10 @@ font-weight: bold;
 /* Features section */
 
 #features {
+  background-color: #FFF;
   padding: 7% 15%;
+  position: relative;
+  z-index: 3;
 }
 
 .feature-box {
@@ -134,3 +145,19 @@ font-weight: bold;
 .pricing-dog {
   padding: 3% 2%;
 }
+
+
+  /* Media queries */
+
+  @media (max-width: 1028px) {
+
+    #title {
+      text-align: center;
+    }
+
+    .title-image {
+      position: static;
+      transform: rotate(0);
+    }
+
+  }
